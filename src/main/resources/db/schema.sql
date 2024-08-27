@@ -1,6 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS tele2_chat;
-GRANT CREATE ON SCHEMA tele2_chat TO admin;
-
 -- Создание таблицы chat_users
 CREATE TABLE IF NOT EXISTS tele2_chat.chat_users (
     id SERIAL PRIMARY KEY,
@@ -21,6 +18,6 @@ CREATE TABLE IF NOT EXISTS tele2_chat.message (
 -- Создание индексов
 CREATE INDEX IF NOT EXISTS idx_chat_users_username ON tele2_chat.chat_users(username);
 CREATE INDEX IF NOT EXISTS idx_chat_users_id ON tele2_chat.chat_users(id);
-CREATE INDEX IF NOT EXISTS idx_messages_timestamp ON tele2_chat.messages(timestamp);
-CREATE INDEX IF NOT EXISTS idx_messages_user_id ON tele2_chat.messages(user_id);
+CREATE INDEX IF NOT EXISTS idx_messages_timestamp ON tele2_chat.message(timestamp);
+CREATE INDEX IF NOT EXISTS idx_messages_user_id ON tele2_chat.message(user_id);
 ;

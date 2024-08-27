@@ -1,4 +1,0 @@
-CREATE DATABASE tele2_chat_db;
-
-CREATE User admin WITH PASSWORD '1111';
-GRANT ALL PRIVILEGES ON DATABASE tele2_chat_db TO admin;
